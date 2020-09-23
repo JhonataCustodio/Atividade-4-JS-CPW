@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <title>Atividade 04</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h3> Atividade 4 </h3>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <form id="formulario" >
+                    <div class="row">
+                      <div class="col">
+                            <h5>Idade da primeira pessoa</h5>
+                            <input type="text" id="primeiraPessoa" class="form-control" placeholder="Digite a idade">
+                      </div>
+                      <div class="col">
+                            <h5>Idade da segunda pessoa</h5>
+                            <input type="text" id="segundaPessoa" class="form-control" placeholder="Digite a idade">
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p></p>
+                            <button value="somarIdades" type="button" onclick="somarIdades()" class="btn btn-dark btn-lg btn-block btn-sm">Somar idades</button>
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+                <div class="row">
+                    <div class="col">
+                        <div class="alert alert-dark" role="alert">
+                            Idades somadas: <div id="result"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p></p>
+
+        <div class="card">
+            <div class="card-body">
+                <form id="formulario" >
+                    <div class="row">
+                      <div class="col">
+                            <h5>Quantidade de Cavalos comprados</h5>
+                            <input type="text" id="cavalos" class="form-control" placeholder="Digite a quantidade de cavalos comprados">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <p></p>
+                            <button value="ferraduras" type="button" onclick="ferraduras()" class="btn btn-dark btn-lg btn-block btn-sm">
+                                Calcular
+                            </button>
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+                <div class="row">
+                    <div class="col">
+                        <div class="alert alert-dark" role="alert">
+                            Quantidade de ferraduras necessarias: <div id="resultFerraduras"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p></p>
+
+        <div class="card">
+            <div class="card-body">
+                <form id="formulario" >
+                    <div class="row">
+                      <div class="col">
+                            <h5>Lado A</h5>
+                            <input type="text" id="ladoA" class="form-control" placeholder="Metros do lado A">
+                      </div>
+                      <div class="col">
+                            <h5>Lado B</h5>
+                            <input type="text" id="ladoB" class="form-control" placeholder="Metros do lado B">
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p></p>
+                            <button value="calcularMetros" type="button" onclick="calcularMetros()" class="btn btn-dark btn-lg btn-block btn-sm">
+                                Calcular Metros Quadrado
+                            </button>
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+                <div class="row">
+                    <div class="col">
+                        <div class="alert alert-dark" role="alert">
+                            Metro quadrado (m²): <div id="metrosQuadrado"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+        function somarIdades(){
+            var primeiraPessoa = document.getElementById("primeiraPessoa").value;
+            var segundaPessoa = document.getElementById("segundaPessoa").value;
+            var resultado = parseInt(primeiraPessoa)+parseInt(segundaPessoa);
+            //alert(resultado);
+            document.getElementById("result").innerHTML = resultado;
+           
+        }
+
+        function ferraduras(){
+            var cavalos = document.getElementById("cavalos").value;
+            var resultado = cavalos * 4;
+            //alert(resultado);
+            document.getElementById("resultFerraduras").innerHTML = resultado;
+           
+        }
+
+        function calcularMetros(){
+            var ladoA = document.getElementById("ladoA").value;
+            var ladoB = document.getElementById("ladoB").value;
+            var resultado = ladoA * ladoB;
+
+            document.getElementById("metrosQuadrado").innerHTML = resultado;
+        }
+    
+</script>
+
+
+
+
+
+
+
+</html>
